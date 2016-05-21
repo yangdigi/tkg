@@ -1,0 +1,107 @@
+{
+	"name": "YD40w_v2",
+	"description": "YD40w_v2 by YANG",
+	"max_layers": 3,
+	"max_fns": 32,
+	"eep_size": 1024,
+	"eep_start": 50,
+	"matrix_rows": 16,
+	"matrix_cols": 16,
+	"physical_rows": 4,
+	"matrix_map": {
+		"0,0": { "row": 3, "col": 14 },
+		"1,0": { "row": 4, "col": 4 },
+		"2,0": { "row": 4, "col": 2 },
+		"3,0": { "row": 1, "col": 11 },
+		"4,0": { "row": 4, "col": 5 },
+		"5,0": { "row": 3, "col": 9 },
+		"6,0": { "row": 1, "col": 12 },
+		"7,0": { "row": 3, "col": 3 },
+		"8,0": { "row": 0, "col": 13 },
+		"9,0": { "row": 6, "col": 1 },
+		"10,0": { "row": 5, "col": 3 },
+		"11,0": { "row": 1, "col": 1 },
+		"0,1,1.25": { "row": 3, "col": 13 },
+		"1.25,1": { "row": 4, "col": 3 },
+		"2.25,1": { "row": 4, "col": 1 },
+		"3.25,1": { "row": 1, "col": 7 },
+		"4.25,1": { "row": 2, "col": 15 },
+		"5.25,1": { "row": 1, "col": 4 },
+		"6.25,1": { "row": 1, "col": 3 },
+		"7.25,1": { "row": 0, "col": 15 },
+		"8.25,1": { "row": 3, "col": 6 },
+		"9.25,1": { "row": 5, "col": 14 },
+		"10.25,1,1.75": { "row": 0, "col": 5 },
+		"0,2,1.75": { "row": 3, "col": 15 },
+		"1.75,2": { "row": 2, "col": 11 },
+		"2.75,2": { "row": 1, "col": 10 },
+		"3.75,2": { "row": 3, "col": 11 },
+		"4.75,2": { "row": 3, "col": 10 },
+		"5.75,2": { "row": 2, "col": 3 },
+		"6.75,2": { "row": 6, "col": 0 },
+		"7.75,2": { "row": 1, "col": 13 },
+		"8.75,2": { "row": 2, "col": 10 },
+		"9.75,2": { "row": 5, "col": 7 },
+		"9.75,2,1.25": { "row": 5, "col": 7 },
+		"10.75,2,1.25": { "row": 2, "col": 12 },
+		"11,2": { "row": 2, "col": 12 },
+		"0,3,1.25": { "row": 2, "col": 9 },
+		"1.25,3": { "row": 2, "col": 5 },
+		"2.25,3": { "row": 2, "col": 1 },
+		"2.25,3,1.25": { "row": 2, "col": 1 },
+		"3.25,3,6.25": { "row": 0, "col": 12 },
+		"3.5,3,2.25": { "row": 1, "col": 14 },
+		"5.75,3,2.75": { "row": 2, "col": 8 },
+		"8.5,3,1.25": { "row": 3, "col": 1 },		
+		"9.5,3,1.25": { "row": 0, "col": 8 },
+		"9.75,3": { "row": 0, "col": 8 },
+		"10.75,3,1.25": { "row": 0, "col": 6 }	
+	},
+	"led_count": 1,
+	"led_map": [{
+		"name": "U2U LED",
+		"description": "",
+		"default": {
+			"binding": "LEDMAP_CAPS_LOCK",
+			"backlight": 0
+		}
+	}],
+	"led_additional_index": 1,
+	"action_functions": [{
+		"name": "Tricky Esc",
+		"description": "按左或右shift加Esc，输出~!",
+		"opt": []
+	},{
+		"name": "Tricky Esc LShift",
+		"description": "按左shift加Esc，输出~，右Shift加Esc保持不变!",
+		"opt": []
+	},{
+		"name": "Magic RShift",
+		"description": "按住右shift时，输出and后的符号。按左Shift时保持不变!",
+		"opt": [
+		       "ESC_GRV","ENTER_QUOT","DOT_SLASH","UP_SLASH","L_SCOLON"
+		       ]
+	},{
+		"name": "LCtrl LAlt BS2Del",
+		"description": "按左Ctrl+左Alt+Backspace，等于Ctrl+Alt+Del!",
+		"opt": []
+	},{
+		"name": "LAlt F4",
+		"description": "按左Alt加4，等于Alt+F4，右alt加4保持不变，比较适用于60%键盘!",
+		"opt": []
+	}],
+	"additional": [{
+		"start": 16,
+		"size": 34,
+		"data": []
+	},{
+		"start": 7,
+		"size": 8,
+		"type": "word",
+		"data": []
+	}],
+	"bootloader": [{
+		"name": "DFU",
+		"mcu": "atmega32u4"
+	}]
+}

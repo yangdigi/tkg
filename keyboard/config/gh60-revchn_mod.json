@@ -1,0 +1,52 @@
+{
+	"name": "GH60 (RevCHN RGB Under Glow Mod)",
+	"description": "GH60 CHN的一个改版固件，增加灯带控制及其他一些按键功能",
+	"led_count": 2,
+	"led_map": [{
+		"name": "Caps Lock",
+		"description": "",
+		"default": {
+			"binding": "LEDMAP_CAPS_LOCK",
+			"backlight": 1
+		}
+	},{
+		"name": "Backlight",
+		"description": "",
+		"default": {
+			"binding": "LEDMAP_NO",
+			"backlight": 1
+		}
+	}],
+	"action_functions": [{
+		"name": "Tricky Esc",
+		"description": "按左或右shift加Esc，输出~!",
+		"opt": []
+	},{
+		"name": "RGB Toggle",
+		"description": "Toggle RGB light",
+		"opt": []
+	},{
+		"name": "RGB Decrease",
+		"description": "Decrease level of RGB light",
+		"opt": []
+	},{
+		"name": "RGB Increase",
+		"description": "Increase level of RGB light",
+		"opt": []
+	},{
+		"name": "RGB Step",
+		"description": "Change RGB light level by step",
+		"opt": []
+	},{
+		"name": "LAlt F4",
+		"description": "按左Alt加4，等于Alt+F4，右alt加4保持不变，比较适用于60%键盘!",
+		"opt": []
+	}],
+	"led_additional_index": 0,
+	"additional": [{
+		"start": 7,
+		"size": 4,
+		"type": "word",
+		"data": []
+	}]
+}

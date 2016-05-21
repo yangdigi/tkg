@@ -1,0 +1,163 @@
+{
+	"name": "Alan60",
+	"description": "Alan60测试添加新功能支持",
+	"max_layers": 8,
+	"max_fns": 32,
+	"eep_size": 1024,
+	"eep_start": 16,
+	"matrix_rows": 5,
+	"matrix_cols": 14,
+	"physical_rows": 5,
+	"matrix_map": {
+		"0,0": { "row": 0, "col": 0 },
+		"1,0": { "row": 0, "col": 1 },
+		"2,0": { "row": 0, "col": 2 },
+		"3,0": { "row": 0, "col": 3 },
+		"4,0": { "row": 0, "col": 4 },
+		"5,0": { "row": 0, "col": 5 },
+		"6,0": { "row": 0, "col": 6 },
+		"7,0": { "row": 0, "col": 7 },
+		"8,0": { "row": 0, "col": 8 },
+		"9,0": { "row": 0, "col": 9 },
+		"10,0": { "row": 0, "col": 10 },
+		"11,0": { "row": 0, "col": 11 },
+		"12,0": { "row": 0, "col": 12 },
+		"13,0": { "row": 0, "col": 13 },
+		"13,0,2": { "row": 0, "col": 13 },
+		"14,0": { "row": 4, "col": 9 },
+		"0,1,1.5": { "row": 1, "col": 0 },
+		"1.5,1": { "row": 1, "col": 1 },
+		"2.5,1": { "row": 1, "col": 2 },
+		"3.5,1": { "row": 1, "col": 3 },
+		"4.5,1": { "row": 1, "col": 4 },
+		"5.5,1": { "row": 1, "col": 5 },
+		"6.5,1": { "row": 1, "col": 6 },
+		"7.5,1": { "row": 1, "col": 7 },
+		"8.5,1": { "row": 1, "col": 8 },
+		"9.5,1": { "row": 1, "col": 9 },
+		"10.5,1": { "row": 1, "col": 10 },
+		"11.5,1": { "row": 1, "col": 11 },
+		"12.5,1": { "row": 1, "col": 12 },
+		"13.5,1,1.5": { "row": 1, "col": 13 },
+		"13.5,1,1.5,2,13.75,1.25": { "row": 2, "col": 13 },
+		"0,2,1.75": { "row": 2, "col": 0 },
+		"1.75,2": { "row": 2, "col": 1 },
+		"2.75,2": { "row": 2, "col": 2 },
+		"3.75,2": { "row": 2, "col": 3 },
+		"4.75,2": { "row": 2, "col": 4 },
+		"5.75,2": { "row": 2, "col": 5 },
+		"6.75,2": { "row": 2, "col": 6 },
+		"7.75,2": { "row": 2, "col": 7 },
+		"8.75,2": { "row": 2, "col": 8 },
+		"9.75,2": { "row": 2, "col": 9 },
+		"10.75,2": { "row": 2, "col": 10 },
+		"11.75,2": { "row": 2, "col": 11 },
+		"12.75,2": { "row": 2, "col": 12 },
+		"12.75,2,2.25": { "row": 2, "col": 13 },
+		"13.75,2,1.25": { "row": 2, "col": 13 },
+		"0,3,2.25": { "row": 3, "col": 0 },
+		"0,3,1.25": { "row": 3, "col": 0 },
+		"1.25,3": { "row": 3, "col": 1 },
+		"2.25,3": { "row": 3, "col": 2 },
+		"3.25,3": { "row": 3, "col": 3 },
+		"4.25,3": { "row": 3, "col": 4 },
+		"5.25,3": { "row": 3, "col": 5 },
+		"6.25,3": { "row": 3, "col": 6 },
+		"7.25,3": { "row": 3, "col": 7 },
+		"8.25,3": { "row": 3, "col": 8 },
+		"9.25,3": { "row": 3, "col": 9 },
+		"10.25,3": { "row": 3, "col": 10 },
+		"11.25,3": { "row": 3, "col": 11 },
+		"11.25,3,1.75": { "row": 3, "col": 11 },
+		"12.25,3,2.75": { "row": 3, "col": 13 },
+		"12.25,3,1.75": { "row": 3, "col": 13 },
+		"12.25,3": { "row": 3, "col": 12 },
+		"13,3": { "row": 3, "col": 13 },
+		"13.25,3,1.75": { "row": 3, "col": 13 },
+		"14,3": { "row": 3, "col": 12 },
+		"0,4,1.25": { "row": 4, "col": 0 },
+		"0,4,1.5": { "row": 4, "col": 0 },
+		"1.25,4,1.25": { "row": 4, "col": 1 },
+		"1.5,4,1.5": { "row": 4, "col": 1 },
+		"1.5,4": { "row": 4, "col": 1 },
+		"2.5,4,1.25": { "row": 4, "col": 2 },
+		"2.5,4,1.5": { "row": 4, "col": 2 },
+		"3.75,4,6.25": { "row": 4, "col": 5 },
+		"3,4,7": { "row": 4, "col": 5 },
+		"4,4,7": { "row": 4, "col": 5 },
+		"10,4,1.25": { "row": 4, "col": 10 },
+		"10,4": { "row": 4, "col": 10 },
+		"10,4,1.5": { "row": 4, "col": 10 },
+		"11,4": { "row": 4, "col": 11 },
+		"11.25,4,1.25": { "row": 4, "col": 11 },
+		"11.5,4": { "row": 4, "col": 11 },
+		"11,4,1.5": { "row": 4, "col": 11 },
+		"12,4": { "row": 4, "col": 12 },
+		"12.5,4,1.25": { "row": 4, "col": 12 },
+		"12.5,4": { "row": 4, "col": 12 },
+		"13,4": { "row": 4, "col": 13 },
+		"13.75,4,1.25": { "row": 4, "col": 13 },
+		"13.5,4,1.5": { "row": 4, "col": 13 },
+		"14,4": { "row": 2, "col": 12 }
+	},
+	"led_count": 2,
+	"led_map": [{
+		"name": "Caps Lock",
+		"description": "",
+		"default": {
+			"binding": "LEDMAP_CAPS_LOCK",
+			"backlight": 1
+		}
+	},{
+		"name": "Backlight",
+		"description": "",
+		"default": {
+			"binding": "LEDMAP_NO",
+			"backlight": 1
+		}
+	}],
+	"action_macros": [{
+		"name": "00",
+		"description": "Keypad 00",
+		"opt": []
+	}],
+	"action_functions": [{
+		"name": "Tricky Esc",
+		"description": "按左或右shift加Esc，输出~!",
+		"opt": []
+	},{
+		"name": "Tricky Esc Plus",
+		"description": "在Tricky Esc的基础上，增加按住左Ctrl时，ESC等于`~!",
+		"opt": []
+	},{
+		"name": "Tricky Esc LShift",
+		"description": "按左shift加Esc，输出~，右Shift加Esc保持不变!",
+		"opt": []
+	},{
+		"name": "Tricky Esc RShift",
+		"description": "按右shift加Esc，输出~，左Shift加Esc保持不变!",
+		"opt": []
+	},{
+		"name": "LCtrl LAlt BS2Del",
+		"description": "按左Ctrl+左Alt+Backspace，等于Ctrl+Alt+Del!",
+		"opt": []
+	},{
+		"name": "LAlt F4",
+		"description": "按左Alt加4，等于Alt+F4，右alt加4保持不变，比较适用于60%键盘!",
+		"opt": []
+	}],
+	"led_additional_index": 0,
+	"additional": [{
+		"start": 8,
+		"size": 4,
+		"type": "word",
+		"data": []
+	}],
+	"bootloader": [{
+		"name": "DFU",
+		"mcu": "atmega32u4"
+	}],
+	"firmware": [{
+		"name": "No Console"
+	}]
+}
