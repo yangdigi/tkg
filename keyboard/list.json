@@ -7,6 +7,10 @@
 	"size": 60,
 	"group": "second-party"
 },{
+	"name": "GH60 (RevCHN_Mod)",
+	"size": 60,
+	"group": "second-party"
+},{
 	"name": "GHPad",
 	"size": 10,
 	"group": "third-party"
@@ -66,4 +70,28 @@
 	"name": "NerD (TKL)",
 	"size": 80,
 	"group": "third-party"
+},{
+	"name": "Alan60",
+	"size": 60,
+	"group": "third-party"
+},{
+	"name": "YD40_Wireless (K230)",
+	"size": 40,
+	"group": "YDKBs"
+},{
+	"name": "GH60 (RevYDMod)",
+	"size": 60,
+	"group": "third-party"
+},{
+	"name": "YD42 (MA42Mod)",
+	"size": 42,
+	"group": "third-party"
+},{
+	"name": "G80_9009HAU",
+	"size": 149,
+	"group": "third-party"
+},{
+	"name": "YD40w_v2 (+YDPADw)",
+	"size": 40,
+	"group": "YDKBs"
 }]
