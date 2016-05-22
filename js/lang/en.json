@@ -149,6 +149,12 @@
 		"Bind to default layer":"绑定默认层",
 		"Bind to layer":"绑定层",
 		"Indicator":"指示灯",
+		
+		"ESC_GRV":"Esc and ~",
+		"ENTER_QUOT":"Enter and \"",		
+		"DOT_SLASH":".> and ?",
+		"UP_SLASH":"↑ and ?",
+		"L_SCOLON":"l L and :",
 
 		"Title of this site, aka TKG.":"本站标题，简称TKG。",
 		"1. Select your keyboard here.":"1. 在此处选择您的键盘。",

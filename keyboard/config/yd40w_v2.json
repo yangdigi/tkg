@@ -79,7 +79,7 @@
 		"name": "Magic RShift",
 		"description": "按住右shift时，输出and后的符号。按左Shift时保持不变!",
 		"opt": [
-		       "ESC_GRV","ENTER_QUOT","DOT_SLASH","UP_SLASH","L_SCOLON"
+		       "Esc and ~","Enter and \"",".> and ?","↑ and ?","l L and :","Backspace and |"
 		       ]
 	},{
 		"name": "LCtrl LAlt BS2Del",
