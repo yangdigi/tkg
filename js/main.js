@@ -811,7 +811,7 @@ function adjustPopoverPosition($popover) {
 }
 
 function isKLEUrl(url) {
-	return /^(http:\/\/)?(121|www)\..*\/(layouts|gists)\/[0-9a-z]+$/.test(url);
+	return /^(http:\/\/)?(yang|121|www)\..*\/(layouts|gists)\/[0-9a-z]+$/.test(url);
 }
 
 function getKLERawData(url, success, fail) {
