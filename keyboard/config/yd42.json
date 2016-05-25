@@ -89,10 +89,6 @@
 		"name": "LCtrl LAlt BS2Del",
 		"description": "按左Ctrl+左Alt+Backspace，等于Ctrl+Alt+Del!",
 		"opt": []
-	},{
-		"name": "LAlt F4",
-		"description": "按左Alt加4，等于Alt+F4，右alt加4保持不变，比较适用于60%键盘!",
-		"opt": []
 	}],
 	"led_additional_index": 0,
 	"additional": [{
