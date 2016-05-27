@@ -67,6 +67,15 @@
 		}
 	}],
 	"led_additional_index": 1,
+	"action_macros": [{
+		"name": "Home PgUp 2in1",
+		"description": "短按一下为Page Up键，长按超过0.2秒再放开是HOME键。",
+		"opt": []
+	},{
+		"name": "END PgDn 2in1",
+		"description": "短按一下为Page Down键，长按超过0.2秒再放开是END键。",
+		"opt": []
+	}],
 	"action_functions": [{
 		"name": "Tricky Esc",
 		"description": "按左或右shift加Esc，输出~!",
@@ -99,5 +108,9 @@
 		"size": 8,
 		"type": "word",
 		"data": []
+	}],
+	"bootloader": [{
+		"name": "DFU",
+		"mcu": "atmega32u4"
 	}]
 }
