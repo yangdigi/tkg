@@ -86,4 +86,8 @@
 	"name": "YD40w_v2 (+YDPADw)",
 	"size": 40,
 	"group": "YDKBs"
+},{
+	"name": "YD40w_test",
+	"size": 40,
+	"group": "third-party"
 }]
