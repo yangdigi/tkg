@@ -4,7 +4,7 @@
 	"max_layers": 3,
 	"max_fns": 32,
 	"eep_size": 1024,
-	"eep_start": 50,
+	"eep_start": 16,
 	"matrix_rows": 16,
 	"matrix_cols": 16,
 	"physical_rows": 5,
@@ -68,7 +68,14 @@
 		"14.25,3": { "row": 5, "col": 11 },
 		"15.25,3,1,2": { "row": 5, "col": 8 },
 		"12.25,4,2": { "row": 6, "col": 2 },
-		"14.25,4": { "row": 6, "col": 3 }
+		"14.25,4": { "row": 6, "col": 3 },
+		"0,4": { "row": 15, "col": 4 },
+		"1,4": { "row": 15, "col": 6 },
+		"2,4": { "row": 15, "col": 5 },
+		"3,4": { "row": 15, "col": 9 },
+		"4,4": { "row": 15, "col": 10 },
+		"5,4": { "row": 15, "col": 7 },
+		"6,4": { "row": 15, "col": 8 }
 	},
 	"led_count": 1,
 	"led_map": [{
@@ -79,7 +86,7 @@
 			"backlight": 0
 		}
 	}],
-	"led_additional_index": 1,
+	"led_additional_index": 0,
 	"action_macros": [{
 		"name": "Home PgUp 2in1",
 		"description": "短按一下为Page Up键，长按超过0.2秒再放开是HOME键。",
@@ -107,18 +114,10 @@
 		"name": "LCtrl LAlt BS2Del",
 		"description": "按左Ctrl+左Alt+Backspace，等于Ctrl+Alt+Del!",
 		"opt": []
-	},{
-		"name": "LAlt F4",
-		"description": "按左Alt加4，等于Alt+F4，右alt加4保持不变，比较适用于60%键盘!",
-		"opt": []
 	}],
 	"additional": [{
-		"start": 16,
-		"size": 34,
-		"data": []
-	},{
-		"start": 7,
-		"size": 8,
+		"start": 8,
+		"size": 6,
 		"type": "word",
 		"data": []
 	}],
