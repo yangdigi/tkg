@@ -1249,7 +1249,21 @@ var keycode_map = {
 		"label": [ "www favorites", "wwwfavorites", "wfav" ],
 		"short_name": "KC_WFAV"
 	},
-	
+	"KC_WWW_FAVORITES": {
+		"name": "WWW Favorites",
+		"description": "WWW Favorites",
+		"keycode": "0xBC",
+		"label": [ "www favorites", "wwwfavorites", "wfav" ],
+		"short_name": "KC_WFAV"
+	},
+	"KC_BOOTLOADER": {
+		"name": "JMP BOOTLOADER",
+		"description": "Jump to BOOTLOADER",
+		"keycode": "0xBF",
+		"label": [ "jmp_bl","jmp bl" ],
+		"short_name": "KC_BTLD"
+	},
+		
 	/* Fn Key */
 	"KC_FN0": {
 		"name": "Fn Key 0",
