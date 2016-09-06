@@ -32,7 +32,7 @@ function BurnFile(id) {
 							currentStep: 0,
 							messages: [ "Burning .eep file" ]
 						};
-						_programmer.burnEEP(eep, _onBurnFileDone, _onBurnFileFail);
+						_programmer.burnEEP(null, eep, _onBurnFileDone, _onBurnFileFail);
 					}
 				});
 			}

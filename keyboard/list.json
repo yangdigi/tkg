@@ -63,6 +63,10 @@
 	"size": 5,
 	"group": "first-party"
 },{
+	"name": "Staryu (Lite)",
+	"size": 5,
+	"group": "first-party"
+},{
 	"name": "Alan60",
 	"size": 60,
 	"group": "third-party"
@@ -90,4 +94,16 @@
 	"name": "YD40w_test",
 	"size": 40,
 	"group": "third-party"
+},{
+	"name": "USB2USB",
+	"size": 0,
+	"group": "third-party"
+},{
+	"name": "ErgoDone",
+	"size": 76,
+	"group": "first-party"
+},{
+	"name": "CW40",
+	"size": 40,
+	"group": "first-party"
 }]
