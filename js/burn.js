@@ -135,7 +135,7 @@ function getHEX(done) {
 		done.apply(this, [ _firmware["hex"] ]);
 		return;
 	}
-	var result = parseKeyboardName(_keyboard["name"]);
+	var result = parseKeyboardName(_keyboardName);
 	var main = result["main"];
 	var variant = result["variant"];
 	var url = "keyboard/firmware/" + main;

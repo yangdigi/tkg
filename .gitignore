@@ -6,4 +6,3 @@ cache/c/*
 cache/eep/*
 dev/
 !.gitkeep
-keyboard/config/gh60-revxd_mod.json
