@@ -114,16 +114,32 @@
 		"description": "Toggle RGB light",
 		"opt": []
 	},{
-		"name": "RGB Decrease",
-		"description": "Decrease level of RGB light",
+		"name": "RGB模式切换",
+		"description": "RGB Mode",
 		"opt": []
 	},{
-		"name": "RGB Increase",
-		"description": "Increase level of RGB light",
+		"name": "RGB色相减",
+		"description": "RGB Decrease HUE",
 		"opt": []
 	},{
-		"name": "RGB Step",
-		"description": "Change RGB light level by step",
+		"name": "RGB色相加",
+		"description": "RGB Increase HUE",
+		"opt": []
+	},{
+    	"name": "RGB饱和度减",
+		"description": "RGB Decrease SAT",
+		"opt": []
+	},{
+		"name": "RGB饱和度加",
+		"description": "RGB Increase SAT",
+		"opt": []
+	},{
+		"name": "RGB明度减",
+		"description": "RGB Decrease VAL",
+		"opt": []
+	},{
+		"name": "RGB明度加",
+		"description": "RGB Increase VAL",
 		"opt": []
 	}],
 	"bootloader": [{
