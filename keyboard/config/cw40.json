@@ -4,7 +4,7 @@
 	"max_layers": 8,
 	"max_fns": 32,
 	"eep_size": 1024,
-	"eep_start": 17,
+	"eep_start": 20,
 	"matrix_rows": 4,
 	"matrix_cols": 11,
 	"physical_rows": 4,
@@ -152,7 +152,7 @@
 		"mcu": "atmega32u4"
 	}],
 	"additional": [{
-		"start": 7,
+		"start": 11,
 		"size": 8,
 		"type": "word",
 		"data": []

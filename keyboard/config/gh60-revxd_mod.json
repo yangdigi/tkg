@@ -77,8 +77,8 @@
 	}],
 	"led_additional_index": 0,
 	"additional": [{
-		"start": 7,
-		"size": 4,
+		"start": 11,
+		"size": 8,
 		"type": "word",
 		"data": []
 	}]
