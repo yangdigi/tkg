@@ -4,7 +4,7 @@
 	"max_layers": 8,
 	"max_fns": 32,
 	"eep_size": 1024,
-	"eep_start": 20,
+	"eep_start": 50,
 	"matrix_rows": 4,
 	"matrix_cols": 11,
 	"physical_rows": 4,
@@ -50,8 +50,31 @@
 		"9.5,3,1.25": {"row": 3, "col": 8},
 		"10.75,3,1.25": {"row": 3, "col": 9}
 	},
-	"led_count": 4,
+	"led_count": 7,
 	"led_map": [{
+		"name": "RGB底灯红",
+		"description": "",
+		"default": {
+			"binding": "LEDMAP_CAPS_LOCK",
+			"backlight": 0
+		}
+	},{
+		"name": "RGB底灯绿",
+		"description": "",
+		"default": {
+			"binding": "LEDMAP_LAYER",
+			"args": [ 1 ],
+			"backlight": 0
+		}
+	},{
+		"name": "RGB底灯蓝",
+		"description": "",
+		"default": {
+			"binding": "LEDMAP_LAYER",
+			"args": [ 2 ],
+			"backlight": 0
+		}
+	},{
 		"name": "Caps Lock",
 		"description": "",
 		"default": {
@@ -115,31 +138,31 @@
 		"opt": []
 	},{
 		"name": "RGB模式切换",
-		"description": "RGB Mode",
+		"description": "RGB模式加，同时按住左Shift时为模式减",
 		"opt": []
 	},{
 		"name": "RGB色相减",
-		"description": "RGB Decrease HUE",
+		"description": "RGB色相减",
 		"opt": []
 	},{
 		"name": "RGB色相加",
-		"description": "RGB Increase HUE",
+		"description": "RGB色相加，同时按住左Shift时为色相减",
 		"opt": []
 	},{
     	"name": "RGB饱和度减",
-		"description": "RGB Decrease SAT",
+		"description": "RGB饱和度减",
 		"opt": []
 	},{
 		"name": "RGB饱和度加",
-		"description": "RGB Increase SAT",
+		"description": "RGB饱和度加，同时按住左Shift时为饱和度减",
 		"opt": []
 	},{
 		"name": "RGB明度减",
-		"description": "RGB Decrease VAL",
+		"description": "RGB明度减",
 		"opt": []
 	},{
 		"name": "RGB明度加",
-		"description": "RGB Increase VAL",
+		"description": "RGB明度加，同时按住左Shift时为明度减",
 		"opt": []
 	}],
 	"bootloader": [{
@@ -152,8 +175,8 @@
 		"mcu": "atmega32u4"
 	}],
 	"additional": [{
-		"start": 11,
-		"size": 8,
+		"start": 30,
+		"size": 14,
 		"type": "word",
 		"data": []
 	}],
