@@ -35,20 +35,8 @@
 	"size": 68,
 	"group": "second-party"
 },{
-	"name": "LR94",
-	"size": 94,
-	"group": "second-party"
-},{
-	"name": "Fantastic60",
-	"size": 60,
-	"group": "second-party"
-},{
 	"name": "AKB96",
 	"size": 96,
-	"group": "second-party"
-},{
-	"name": "YUK86",
-	"size": 86,
 	"group": "second-party"
 },{
 	"name": "TentaPad",
@@ -97,10 +85,6 @@
 },{
 	"name": "YD40w_test",
 	"size": 40,
-	"group": "third-party"
-},{
-	"name": "USB2USB",
-	"size": 0,
 	"group": "third-party"
 },{
 	"name": "ErgoDone",
