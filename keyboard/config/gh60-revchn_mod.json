@@ -1,8 +1,32 @@
 {
 	"name": "GH60 (RevCHN RGB Under Glow Mod)",
 	"description": "GH60 CHN的一个改版固件，增加灯带控制及其他一些按键功能",
-	"led_count": 2,
+	"eep_start": 50,
+	"led_count": 5,
 	"led_map": [{
+		"name": "RGB底灯红",
+		"description": "",
+		"default": {
+			"binding": "LEDMAP_CAPS_LOCK",
+			"backlight": 0
+		}
+	},{
+		"name": "RGB底灯绿",
+		"description": "",
+		"default": {
+			"binding": "LEDMAP_LAYER",
+			"args": [ 1 ],
+			"backlight": 0
+		}
+	},{
+		"name": "RGB底灯蓝",
+		"description": "",
+		"default": {
+			"binding": "LEDMAP_LAYER",
+			"args": [ 2 ],
+			"backlight": 0
+		}
+	},{
 		"name": "Caps Lock",
 		"description": "",
 		"default": {
@@ -31,37 +55,37 @@
 		"opt": []
 	},{
 		"name": "RGB模式切换",
-		"description": "RGB Mode",
+		"description": "RGB模式加，同时按住左Shift时为模式减",
 		"opt": []
 	},{
 		"name": "RGB色相减",
-		"description": "RGB Decrease HUE",
+		"description": "RGB色相减",
 		"opt": []
 	},{
 		"name": "RGB色相加",
-		"description": "RGB Increase HUE",
+		"description": "RGB色相加，同时按住左Shift时为色相减",
 		"opt": []
 	},{
     	"name": "RGB饱和度减",
-		"description": "RGB Decrease SAT",
+		"description": "RGB饱和度减",
 		"opt": []
 	},{
 		"name": "RGB饱和度加",
-		"description": "RGB Increase SAT",
+		"description": "RGB饱和度加，同时按住左Shift时为饱和度减",
 		"opt": []
 	},{
 		"name": "RGB明度减",
-		"description": "RGB Decrease VAL",
+		"description": "RGB明度减",
 		"opt": []
 	},{
 		"name": "RGB明度加",
-		"description": "RGB Increase VAL",
+		"description": "RGB明度加，同时按住左Shift时为明度减",
 		"opt": []
 	}],
 	"led_additional_index": 0,
 	"additional": [{
-		"start": 11,
-		"size": 4,
+		"start": 30,
+		"size": 10,
 		"type": "word",
 		"data": []
 	}]
