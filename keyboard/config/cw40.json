@@ -171,6 +171,11 @@
 		"vid": 4617,
 		"pid": 8999
 	},{
+		"name": "RawHID",
+		"mcu": "atmega32u4",
+		"vid": 65261,
+		"pid": 24672
+	},{
 		"name": "DFU",
 		"mcu": "atmega32u4"
 	}],
