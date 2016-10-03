@@ -83,8 +83,12 @@
 	"size": 40,
 	"group": "YDKBs"
 },{
-	"name": "YD40w_test",
+	"name": "YD40w_v2_RawHID",
 	"size": 40,
+	"group": "YDKBs"
+},{
+	"name": "test",
+	"size": 0,
 	"group": "third-party"
 },{
 	"name": "ErgoDone",
