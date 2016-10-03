@@ -1256,6 +1256,20 @@ var keycode_map = {
 		"label": [ "www favorites", "wwwfavorites", "wfav" ],
 		"short_name": "KC_WFAV"
 	},
+	"KC_BRIGHTNESS_UP": {
+		"name": "Screen Brightness Decrement",
+		"description": "BRIGHTNESS UP",
+		"keycode": "0xBD",
+		"label": [ "sbup", "brightness up" ],
+		"short_name": "KC_SBUP"
+	},
+	"KC_BRIGHTNESS_DOWN": {
+		"name": "Screen Brightness Decrement",
+		"description": "Screen Brightness Decrement",
+		"keycode": "0xBE",
+		"label": [ "sbdn", "brightness down" ],
+		"short_name": "KC_SBDN"
+	},
 	"KC_BOOTLOADER": {
 		"name": "JMP BOOTLOADER",
 		"description": "Jump to BOOTLOADER",

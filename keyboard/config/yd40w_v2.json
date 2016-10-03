@@ -106,6 +106,10 @@
 		"opt": [
 		       "Esc and ~","Enter and \"",".> and ?","↑ and ?","l L and :","Backspace and |"
 		       ]
+	},{
+		"name": "蓝牙\\优联 切换",
+		"description": "连接模式切换，40上就是蓝牙与优联间切换!",
+		"opt": []
 	}],
 	"additional": [{
 		"start": 8,
