@@ -4,7 +4,7 @@
 	"max_layers": 7,
 	"max_fns": 32,
 	"eep_size": 1024,
-	"eep_start": 17,
+	"eep_start": 40,
 	"matrix_rows": 8,
 	"matrix_cols": 16,
 	"physical_rows": 5,
@@ -77,31 +77,42 @@
 		"5,4": { "row": 7, "col": 11 },
 		"6,4": { "row": 7, "col": 12 }
 	},
-	"led_count": 0,
-	"led_map": [],
+	"led_count": 1,
+	"led_map": [{
+		"name": "U2U LED",
+		"description": "",
+		"default": {
+			"binding": "LEDMAP_CAPS_LOCK",
+			"backlight": 0
+		}
+	}],
 	"led_additional_index": 0,
 	"action_macros": [{
 		"name": "Home PgUp 2in1",
-		"description": "¶Ì°´Ò»ÏÂÎªPage Up¼ü£¬³¤°´³¬¹ı0.2ÃëÔÙ·Å¿ªÊÇHOME¼ü¡£",
+		"description": "çŸ­æŒ‰ä¸€ä¸‹ä¸ºPage Upé”®ï¼Œé•¿æŒ‰è¶…è¿‡0.2ç§’å†æ”¾å¼€æ˜¯HOMEé”®ã€‚",
 		"opt": []
 	},{
 		"name": "END PgDn 2in1",
-		"description": "¶Ì°´Ò»ÏÂÎªPage Down¼ü£¬³¤°´³¬¹ı0.2ÃëÔÙ·Å¿ªÊÇEND¼ü¡£",
+		"description": "çŸ­æŒ‰ä¸€ä¸‹ä¸ºPage Downé”®ï¼Œé•¿æŒ‰è¶…è¿‡0.2ç§’å†æ”¾å¼€æ˜¯ENDé”®ã€‚",
 		"opt": []
 	}],
 	"action_functions": [{
 		"name": "Tricky Esc LShift",
-		"description": "°´×óshift¼ÓEsc£¬Êä³ö~£¬ÓÒShift¼ÓEsc±£³Ö²»±ä!",
+		"description": "æŒ‰å·¦shiftåŠ Escï¼Œè¾“å‡º~ï¼Œå³ShiftåŠ Escä¿æŒä¸å˜!",
 		"opt": []
 	},{
 		"name": "Magic RShift",
-		"description": "°´×¡ÓÒshiftÊ±£¬Êä³öandºóµÄ·ûºÅ¡£°´×óShiftÊ±±£³Ö²»±ä!",
+		"description": "æŒ‰ä½å³shiftæ—¶ï¼Œè¾“å‡ºandåçš„ç¬¦å·ã€‚æŒ‰å·¦Shiftæ—¶ä¿æŒä¸å˜!",
 		"opt": [
-		       "Esc and ~","Enter and \"",".> and ?","¡ü and ?","l L and :","Backspace and |"
+		       "Esc and ~","Enter and \"",".> and ?","â†‘ and ?","l L and :","Backspace and |"
 		       ]
+	},{
+		"name": "è“ç‰™\\ä¼˜è” åˆ‡æ¢",
+		"description": "è¿æ¥æ¨¡å¼åˆ‡æ¢ï¼Œ40ä¸Šå°±æ˜¯è“ç‰™ä¸ä¼˜è”é—´åˆ‡æ¢!",
+		"opt": []
 	}],
 	"additional": [{
-		"start": 7,
+		"start": 20,
 		"size": 2,
 		"type": "word",
 		"data": []
@@ -109,8 +120,8 @@
 	"bootloader": [{
 		"name": "RawHID",
 		"mcu": "atmega32u4",
-		"vid": 65261,
-		"pid": 24672
+		"vid": 4617,
+		"pid": 9000
 	},{
 		"name": "DFU",
 		"mcu": "atmega32u4"

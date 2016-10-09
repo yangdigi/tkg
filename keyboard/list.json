@@ -85,7 +85,7 @@
 },{
 	"name": "YD40w_v2_RawHID",
 	"size": 40,
-	"group": "YDKBs"
+	"group": "third-party"
 },{
 	"name": "test",
 	"size": 0,
@@ -95,7 +95,7 @@
 	"size": 76,
 	"group": "first-party"
 },{
-	"name": "CW40",
+	"name": "CW40 (Beta)",
 	"size": 40,
 	"group": "first-party"
 }]

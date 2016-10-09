@@ -1,0 +1,191 @@
+{
+	"name": "CryptoWall40 尝鲜版",
+	"description": "An open source 40% keyboard designed by K.T.E.C.",
+	"max_layers": 8,
+	"max_fns": 32,
+	"eep_size": 1024,
+	"eep_start": 50,
+	"matrix_rows": 4,
+	"matrix_cols": 11,
+	"physical_rows": 4,
+	"matrix_map": {
+		"0,0": {"row": 0, "col": 0},
+		"1,0": {"row": 0, "col": 1},
+		"2,0": {"row": 0, "col": 2},
+		"3,0": {"row": 0, "col": 3},
+		"4,0": {"row": 0, "col": 4},
+		"5,0": {"row": 0, "col": 5},
+		"6,0": {"row": 0, "col": 6},
+		"7,0": {"row": 0, "col": 7},
+		"8,0": {"row": 0, "col": 8},
+		"9,0": {"row": 0, "col": 9},
+		"10,0": {"row": 0, "col": 10},
+		"11,0": {"row": 3, "col": 10},
+		"0,1,1.25": {"row": 1, "col": 0},
+		"1.25,1": {"row": 1, "col": 1},
+		"2.25,1": {"row": 1, "col": 2},
+		"3.25,1": {"row": 1, "col": 3},
+		"4.25,1": {"row": 1, "col": 4},
+		"5.25,1": {"row": 1, "col": 5},
+		"6.25,1": {"row": 1, "col": 6},
+		"7.25,1": {"row": 1, "col": 7},
+		"8.25,1": {"row": 1, "col": 8},
+		"9.25,1": {"row": 1, "col": 9},
+		"10.25,1,1.75": {"row": 1, "col": 10},
+		"0,2,1.75": {"row": 2, "col": 0},
+		"1.75,2": {"row": 2, "col": 1},
+		"2.75,2": {"row": 2, "col": 2},
+		"3.75,2": {"row": 2, "col": 3},
+		"4.75,2": {"row": 2, "col": 4},
+		"5.75,2": {"row": 2, "col": 5},
+		"6.75,2": {"row": 2, "col": 6},
+		"7.75,2": {"row": 2, "col": 7},
+		"8.75,2": {"row": 2, "col": 8},
+		"9.75,2,1.25": {"row": 2, "col": 9},
+		"11,2": {"row": 2, "col": 10},
+		"0,3,1.25": {"row": 3, "col":0},
+		"1.25,3": {"row": 3, "col": 1},
+		"2.25,3": {"row": 3, "col": 2},
+		"3.25,3,6.25": {"row": 3, "col": 5},
+		"9.5,3,1.25": {"row": 3, "col": 8},
+		"10.75,3,1.25": {"row": 3, "col": 9}
+	},
+	"led_count": 7,
+	"led_map": [{
+		"name": "RGB底灯红",
+		"description": "",
+		"default": {
+			"binding": "LEDMAP_CAPS_LOCK",
+			"backlight": 0
+		}
+	},{
+		"name": "RGB底灯绿",
+		"description": "",
+		"default": {
+			"binding": "LEDMAP_LAYER",
+			"args": [ 1 ],
+			"backlight": 0
+		}
+	},{
+		"name": "RGB底灯蓝",
+		"description": "",
+		"default": {
+			"binding": "LEDMAP_LAYER",
+			"args": [ 2 ],
+			"backlight": 0
+		}
+	},{
+		"name": "Caps Lock",
+		"description": "",
+		"default": {
+			"binding": "LEDMAP_CAPS_LOCK",
+			"backlight": 1
+		}
+	},{
+		"name": "Esc",
+		"description": "",
+		"default": {
+			"binding": "LEDMAP_NO",
+			"backlight": 1
+		}
+	},{
+		"name": "WASD",
+		"description": "",
+		"default": {
+			"binding": "LEDMAP_LAYER",
+			"args": [ 1 ],
+			"backlight": 1
+		}
+	},{
+		"name": "Backlight",
+		"description": "",
+		"default": {
+			"binding": "LEDMAP_NO",
+			"backlight": 1
+		}
+	}],
+	"led_additional_index": 0,
+	"action_macros": [{
+		"name": "Home PgUp 2in1",
+		"description": "短按一下为Page Up键，长按超过0.2秒再放开是HOME键。",
+		"opt": []
+	},{
+		"name": "END PgDn 2in1",
+		"description": "短按一下为Page Down键，长按超过0.2秒再放开是END键。",
+		"opt": []
+	}],
+	"action_functions": [{
+		"name": "Tricky Esc",
+		"description": "按左或右shift加Esc，输出~!",
+		"opt": []
+	},{
+		"name": "Tricky Esc LShift",
+		"description": "按左shift加Esc，输出~，右Shift加Esc保持不变!",
+		"opt": []
+	},{
+		"name": "Magic RShift",
+		"description": "按住右shift时，输出and后的符号。按左Shift时保持不变!",
+		"opt": [
+		       "Esc and ~","Enter and \"",".> and ?","↑ and ?","l L and :","Backspace and |"
+		       ]
+	},{
+		"name": "LCtrl LAlt BS2Del",
+		"description": "按左Ctrl+左Alt+Backspace，等于Ctrl+Alt+Del!",
+		"opt": []
+	},{
+    	"name": "RGB Toggle",
+		"description": "Toggle RGB light",
+		"opt": []
+	},{
+		"name": "RGB模式切换",
+		"description": "RGB模式加，同时按住左Shift时为模式减",
+		"opt": []
+	},{
+		"name": "RGB色相减",
+		"description": "RGB色相减",
+		"opt": []
+	},{
+		"name": "RGB色相加",
+		"description": "RGB色相加，同时按住左Shift时为色相减",
+		"opt": []
+	},{
+    	"name": "RGB饱和度减",
+		"description": "RGB饱和度减",
+		"opt": []
+	},{
+		"name": "RGB饱和度加",
+		"description": "RGB饱和度加，同时按住左Shift时为饱和度减",
+		"opt": []
+	},{
+		"name": "RGB明度减",
+		"description": "RGB明度减",
+		"opt": []
+	},{
+		"name": "RGB明度加",
+		"description": "RGB明度加，同时按住左Shift时为明度减",
+		"opt": []
+	}],
+	"bootloader": [{
+		"name": "HID",
+		"mcu": "atmega32u4",
+		"vid": 4617,
+		"pid": 8999
+	},{
+		"name": "RawHID",
+		"mcu": "atmega32u4",
+		"vid": 4617,
+		"pid": 9000
+	},{
+		"name": "DFU",
+		"mcu": "atmega32u4"
+	}],
+	"additional": [{
+		"start": 30,
+		"size": 14,
+		"type": "word",
+		"data": []
+	}],
+	"firmware": [{
+		"name": "Prototype"
+	}]
+}
