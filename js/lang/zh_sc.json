@@ -106,6 +106,7 @@
 		"Invert":"反转状态",
 		"On then off":"开启后关闭",
 		"Off then on":"关闭后开启",
+		"Momentary with Modifiers":"修饰键且瞬时开启",
 		"Dual-role send key":"二合一：按键，瞬时开启",
 		"Dual-role toggle layer":"二合一：开关，瞬时开启",
 		"Set then clear":"设置后清除",
@@ -115,6 +116,7 @@
 		"Toggle":"开关",
 		"Step":"步进",
 		"Others":"其他",
+		"Momentary with RShift and Tap Up":"瞬时开启层+Shift+Up合体键",
 		"Built-in function":"内置功能",
 		"Built-in macro":"内置宏",
 
@@ -195,7 +197,8 @@
 		"No devices found":"未检测到设备",
 		"Bootloader not supported":"尚不支持此引导程序",
 		"Turns on layer momentary while holding, but registers key on tap (press and release quickly)":"按住不放时为瞬时开启层，点击（按下后迅速放开）是按键。",
-		"Turns on layer momentary while holding and toggles it with serial taps":"按住不放时为瞬时开启层，双击为层开关（双击现仅限YDKBs，其他为连续五击）。"
+		"Turns on layer momentary while holding and toggles it with serial taps":"按住不放时为瞬时开启层，双击为层开关（双击现仅限YDKBs，其他为连续五击）。",
+		"Registers 'RShift' simulataneously with layer switching while holding, but registers 'Up' on tap":"按住不放时为瞬时开启层且按住‘RShift’键，点击（按下后迅速放开）是按键'Up'。"
 	},
 	"regex": [
 		[ "Layer(\\d+)", "第$1层" ],

@@ -4,7 +4,7 @@
 	"max_layers": 7,
 	"max_fns": 32,
 	"eep_size": 1024,
-	"eep_start": 16,
+	"eep_start": 40,
 	"matrix_rows": 8,
 	"matrix_cols": 16,
 	"physical_rows": 5,
@@ -65,14 +65,8 @@
 		"5,4": { "row": 7, "col": 11 },
 		"6,4": { "row": 7, "col": 12 }
 	},
-	"led_count": 1,
+	"led_count": 0,
 	"led_map": [{
-		"name": "U2U LED",
-		"description": "",
-		"default": {
-			"binding": "LEDMAP_CAPS_LOCK",
-			"backlight": 0
-		}
 	}],
 	"led_additional_index": 0,
 	"action_macros": [{
@@ -96,7 +90,7 @@
 		       ]
 	}],
 	"additional": [{
-		"start": 8,
+		"start": 20,
 		"size": 2,
 		"type": "word",
 		"data": []
@@ -104,5 +98,10 @@
 	"bootloader": [{
 		"name": "DFU",
 		"mcu": "atmega32u4"
+	},{
+		"name": "RawHID",
+		"mcu": "atmega32u4",
+		"vid": 65261,
+		"pid": 91
 	}]
 }

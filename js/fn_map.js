@@ -274,6 +274,69 @@ var action_map = {
 		"param": [ "layer" ],
 		"default": [ 1 ]
 	},
+	"ACTION_LAYER_MODS": {
+		"group": "Layer advanced action",
+		"name": "Momentary with Modifiers",
+		"description": "Registers modifier key(s) simulataneously with layer switching",
+		"code": function (layer, mods) {
+			if (layer >= 0 && layer < 16) {
+				return "0xA" + dechex(layer) + "E" + dechex(modsCode(mods) & 0xF);
+			}
+			else if (layer < 32) {
+				layer -= 16;
+				return "0xB" + dechex(layer) + "E" + dechex(modsCode(mods) & 0xF);
+			}
+			else {
+				return "";
+			}
+		},
+		"param": [ "layer", "mods" ],
+		"default": [ 1, [] ]
+	},
+	"ACTION_LAYER_SHIFT_TAP_UP": {
+		"group": "Others",
+		"name": "Momentary with RShift and Tap Up",
+		"description": "Registers 'RShift' simulataneously with layer switching while holding, but registers 'Up' on tap",
+		"code": function (layer) {
+			if (layer >= 0 && layer < 16) {
+				return "0xA" + dechex(layer) + "D2";
+			}
+			else if (layer < 32) {
+				layer -= 16;
+				return "0xB" + dechex(layer) + "D2";
+			}
+			else {
+				return "";
+			}
+		},
+		"param": [ "layer" ],
+		"default": [ 1 ]
+	},
+/*
+	"ACTION_LAYER_MODS_TAP_UP": {
+		"group": "Layer advanced action",
+		"name": "Momentary with Modifiers",
+		"description": "Registers modifier key(s) simulataneously with layer switching",
+		"code": function (layer, lr, mods) {
+			if (layer >= 0 && layer < 16) {
+				if (lrCode(lr)) {
+					return "0xA" + dechex(layer) + "D" + (dechex(modsCode(mods) & 0xF));
+				} else {
+					return "0xA" + dechex(layer) + "C" + (dechex(modsCode(mods) & 0xF));
+				}
+			}
+			else if (layer < 32) {
+				layer -= 16;
+				return "0xB" + dechex(layer) + "D" + dechex(modsCode(mods) & 0xF);
+			}
+			else {
+				return "";
+			}
+		},
+		"param": [ "layer", "lr", "mods" ],
+		"default": [ 1, "LR_LEFT", [] ]
+	},
+*/
 	"ACTION_LAYER_TAP_KEY": {
 		"group": "Layer advanced action",
 		"name": "Dual-role send key",

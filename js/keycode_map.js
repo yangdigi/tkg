@@ -1257,7 +1257,7 @@ var keycode_map = {
 		"short_name": "KC_WFAV"
 	},
 	"KC_BRIGHTNESS_UP": {
-		"name": "Screen Brightness Decrement",
+		"name": "Screen Brightness Increment",
 		"description": "BRIGHTNESS UP",
 		"keycode": "0xBD",
 		"label": [ "sbup", "brightness up" ],
