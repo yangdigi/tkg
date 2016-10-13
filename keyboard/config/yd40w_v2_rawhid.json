@@ -107,7 +107,11 @@
 		       "Esc and ~","Enter and \"",".> and ?","↑ and ?","l L and :","Backspace and |"
 		       ]
 	},{
-		"name": "蓝牙\\优联 切换",
+		"name": "禁用/启用WIN键",
+		"description": "按一下，禁用或启用WIN键，游戏防误按有用!",
+		"opt": []
+	},{
+		"name": "蓝牙/优联 切换",
 		"description": "连接模式切换，40上就是蓝牙与优联间切换!",
 		"opt": []
 	}],

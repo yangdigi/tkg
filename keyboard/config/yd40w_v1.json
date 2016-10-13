@@ -88,6 +88,10 @@
 		"opt": [
 		       "Esc and ~","Enter and \"",".> and ?","↑ and ?","l L and :","Backspace and |"
 		       ]
+	},{
+		"name": "禁用/启用WIN键",
+		"description": "按一下，禁用或启用WIN键，游戏防误按有用!",
+		"opt": []
 	}],
 	"additional": [{
 		"start": 20,
