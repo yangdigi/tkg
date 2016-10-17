@@ -100,12 +100,12 @@
 		"data": []
 	}],
 	"bootloader": [{
-		"name": "DFU",
-		"mcu": "atmega32u4"
-	},{
 		"name": "RawHID",
 		"mcu": "atmega32u4",
 		"vid": 65261,
 		"pid": 91
+	},{
+		"name": "DFU",
+		"mcu": "atmega32u4"
 	}]
 }
