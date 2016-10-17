@@ -106,7 +106,7 @@
 		"Invert":"反转状态",
 		"On then off":"开启后关闭",
 		"Off then on":"关闭后开启",
-		"Momentary with Modifiers":"修饰键且瞬时开启",
+		"Momentary with modifiers":"修饰键且瞬时开启",
 		"Dual-role send key":"二合一：按键，瞬时开启",
 		"Dual-role toggle layer":"二合一：开关，瞬时开启",
 		"Set then clear":"设置后清除",
