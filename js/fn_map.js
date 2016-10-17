@@ -276,7 +276,7 @@ var action_map = {
 	},
 	"ACTION_LAYER_MODS": {
 		"group": "Layer advanced action",
-		"name": "Momentary with Modifiers",
+		"name": "Momentary with modifiers",
 		"description": "Registers modifier key(s) simulataneously with layer switching",
 		"code": function (layer, mods) {
 			if (layer >= 0 && layer < 16) {
