@@ -39,12 +39,45 @@
 		}
 	}],
 	"led_additional_index": 1,
+	"action_functions": [{
+		"name": "RGB Toggle",
+		"description": "Toggle RGB light",
+		"opt": []
+	},{
+		"name": "RGB模式切换",
+		"description": "RGB模式加，同时按住左Shift时为模式减",
+		"opt": []
+	},{
+		"name": "RGB色相加",
+		"description": "RGB色相加，同时按住左Shift时为色相减",
+		"opt": []
+	},{
+		"name": "RGB饱和度加",
+		"description": "RGB饱和度加，同时按住左Shift时为饱和度减",
+		"opt": []
+	},{
+		"name": "RGB明度加",
+		"description": "RGB明度加，同时按住左Shift时为明度减",
+		"opt": []
+	},{
+		"name": "RGB色相减",
+		"description": "RGB色相减",
+		"opt": []
+	},{
+	    	"name": "RGB饱和度减",
+		"description": "RGB饱和度减",
+		"opt": []
+	},{
+		"name": "RGB明度减",
+		"description": "RGB明度减",
+		"opt": []
+	}],
 	"bootloader": [{
 		"name": "DFU",
 		"mcu": "atmega32u4"
 	}],
 	"additional": [{
-		"start": 15,
+		"start": 16,
 		"size": 34,
 		"data": []
 	},{
@@ -52,5 +85,8 @@
 		"size": 8,
 		"type": "word",
 		"data": []
+	}],
+	"firmware": [{
+		"name": "5RGBLEDS"
 	}]
 }

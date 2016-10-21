@@ -198,7 +198,7 @@
 		"Bootloader not supported":"尚不支持此引导程序",
 		"Turns on layer momentary while holding, but registers key on tap (press and release quickly)":"按住不放时为瞬时开启层，点击（按下后迅速放开）是按键。",
 		"Turns on layer momentary while holding and toggles it with serial taps":"按住不放时为瞬时开启层，双击为层开关（双击现仅限YDKBs，其他为连续五击）。",
-		"Registers 'RShift' simulataneously with layer switching while holding, but registers 'Up' on tap":"按住不放时为瞬时开启层且按住‘RShift’键，点击（按下后迅速放开）是按键'Up'。"
+		"Registers 'RShift' simulataneously with layer switching while holding, but registers 'Up' on tap":"(YDKBs专用)按住不放时为瞬时开启层且按住‘RShift’键，点击（按下后迅速放开）是按键'Up'。"
 	},
 	"regex": [
 		[ "Layer(\\d+)", "第$1层" ],
