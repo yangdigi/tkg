@@ -107,8 +107,12 @@
 		       "Esc and ~","Enter and \"",".> and ?","↑ and ?","l L and :","Backspace and |"
 		       ]
 	},{
-		"name": "禁用/启用WIN键",
-		"description": "按一下，禁用或启用WIN键，游戏防误按有用!",
+		"name": "锁WIN键 启用/禁用",
+		"description": "按一下，启用或禁用锁WIN键功能，游戏防误按有用!",
+		"opt": []
+	},{
+		"name": "坑人模式 启用/禁用",
+		"description": "启用后，按键时有20%的几率按键会无效，防止他人玩键盘有用!",
 		"opt": []
 	},{
 		"name": "蓝牙/优联 切换",
