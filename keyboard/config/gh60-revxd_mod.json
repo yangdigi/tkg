@@ -98,6 +98,14 @@
 		"name": "RGB明度加",
 		"description": "RGB明度加，同时按住左Shift时为明度减",
 		"opt": []
+	},{
+		"name": "锁WIN键 启用/禁用",
+		"description": "按一下，启用或禁用锁WIN键功能，游戏防误按有用!",
+		"opt": []
+	},{
+		"name": "坑人模式 启用/禁用",
+		"description": "启用后，按键时有20%的几率按键会无效，防止他人玩键盘有用!",
+		"opt": []
 	}],
 	"led_additional_index": 0,
 	"additional": [{
