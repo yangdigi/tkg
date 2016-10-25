@@ -12,7 +12,8 @@ switch (language.toLowerCase()) {
 		break;
 	case 'en-us':
 	default:
-		language = 'en';
+        //language = 'en';
+        language = 'zh_sc';
 		break;
 }
 window.lang = new Lang('en', language, true, {
@@ -24,7 +25,8 @@ window.lang = new Lang('en', language, true, {
 var tkg = new TKG();
 var _keyboard = {};
 var _keyboardName = '';
-var _layer_mode = LAYER_NORMAL;
+//var _layer_mode = LAYER_NORMAL;
+var _layer_mode = LAYER_ALL_IN_ONE;
 var _advanced_mode = false;
 var _view_sortby = "name";
 var _view_group = true;
@@ -615,7 +617,8 @@ function updateBurnButtonState() {
 
 function updateDownloadBinButtonState() {
 	if (_advanced_mode) {
-		$('#dl_bin').show();
+        //$('#dl_bin').show();   //NO_BIN
+        $('#dl_bin').hide();
 	}
 	else {
 		$('#dl_bin').hide();
