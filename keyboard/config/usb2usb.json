@@ -1,6 +1,6 @@
 {
 	"name": "USB2USB",
-	"description": "USB2USB Converter",
+	"description": "USB2USB Converter (With RawHID)",
 	"max_layers": 3,
 	"max_fns": 32,
 	"eep_size": 1024,
@@ -32,14 +32,19 @@
 		}
 	}],
 	"led_additional_index": 0,
-	"bootloader": [{
-		"name": "DFU",
-		"mcu": "atmega32u4"
-	}],
 	"additional": [{
 		"start": 8,
 		"size": 6,
 		"type": "word",
 		"data": []
+	}],
+	"bootloader": [{
+		"name": "RawHID",
+		"mcu": "atmega32u4",
+		"vid": 65261,
+		"pid": 91
+	},{
+		"name": "DFU",
+		"mcu": "atmega32u4"
 	}]
 }

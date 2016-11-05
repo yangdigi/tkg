@@ -1,12 +1,4 @@
 [{
-	"name": "GH60 (RevA/B/C)",
-	"size": 60,
-	"group": "third-party"
-},{
-	"name": "GH60 (RevCHN)",
-	"size": 60,
-	"group": "second-party"
-},{
 	"name": "GH60 (RevCHN_Mod)",
 	"size": 60,
 	"group": "second-party"
@@ -14,10 +6,6 @@
 	"name": "GH60 (RevXD_Mod)",
 	"size": 60,
 	"group": "second-party"
-},{
-	"name": "GHPad",
-	"size": 10,
-	"group": "third-party"
 },{
 	"name": "RedScarfII",
 	"size": 77,
@@ -31,16 +19,8 @@
 	"size": 96,
 	"group": "second-party"
 },{
-	"name": "SMART68",
-	"size": 68,
-	"group": "second-party"
-},{
 	"name": "AKB96",
 	"size": 96,
-	"group": "second-party"
-},{
-	"name": "TentaPad",
-	"size": 2,
 	"group": "second-party"
 },{
 	"name": "Kimera",
@@ -67,10 +47,6 @@
 	"size": 40,
 	"group": "YDKBs"
 },{
-	"name": "GH60 (RevYDMod)",
-	"size": 60,
-	"group": "third-party"
-},{
 	"name": "FF42",
 	"size": 42,
 	"group": "third-party"
@@ -83,13 +59,13 @@
 	"size": 40,
 	"group": "YDKBs"
 },{
-	"name": "YD40w_v2_RawHID",
-	"size": 40,
-	"group": "third-party"
-},{
 	"name": "test",
 	"size": 0,
 	"group": "third-party"
+},{
+	"name": "USB2USB",
+	"size": 0,
+	"group": "YDKBs"
 },{
 	"name": "ErgoDone",
 	"size": 76,
