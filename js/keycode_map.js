@@ -1104,35 +1104,35 @@ var keycode_map = {
 		"name": "Audio Mute",
 		"description": "Audio Mute",
 		"keycode": "0xA8",
-		"label": [ "mute" ],
+		"label": [ "mute", "\<i class\=\'fa fa-volume-off\'\>\<\/i\>" ],
 		"short_name": "KC_MUTE"
 	},
 	"KC_AUDIO_VOL_UP": {
 		"name": "Audio Volume Up",
 		"description": "Audio Volume Up",
 		"keycode": "0xA9",
-		"label": [ "volume up", "volumeup", "vol up", "volup", "vol_up" ],
+		"label": [ "volume up", "volumeup", "vol up", "volup", "\<i class\=\'fa fa-volume-up\'\>\<\/i\>", "vol_up" ],
 		"short_name": "KC_VOLU"
 	},
 	"KC_AUDIO_VOL_DOWN": {
 		"name": "Audio Volume Down",
 		"description": "Audio Volume Down",
 		"keycode": "0xAA",
-		"label": [ "volume down", "volumedown", "vol down", "voldown", "vol dn", "voldn", "vol_dn" ],
+		"label": [ "volume down", "volumedown", "vol down", "voldown", "vol dn", "voldn", "\<i class\=\'fa fa-volume-down\'\>\<\/i\>", "vol_dn" ],
 		"short_name": "KC_VOLD"
 	},
 	"KC_MEDIA_NEXT_TRACK": {
 		"name": "Media Next Track",
 		"description": "Media Next Track",
 		"keycode": "0xAB",
-		"label": [ "next track", "nexttrack", "next" ],
+		"label": [ "next track", "nexttrack", "\<i class\=\'fa fa-step-forward\'\>\<\/i\>", "next" ],
 		"short_name": "KC_MNXT"
 	},
 	"KC_MEDIA_PREV_TRACK": {
 		"name": "Media Previous Track",
 		"description": "Media Previous Track",
 		"keycode": "0xAC",
-		"label": [ "previous track", "prevtrack", "previous", "prev" ],
+		"label": [ "previous track", "prevtrack", "previous", "\<i class\=\'fa fa-step-backward\'\>\<\/i\>", "prev" ],
 		"short_name": "KC_MPRV"
 	},
 	"KC_MEDIA_FAST_FORWARD": {
@@ -1153,7 +1153,7 @@ var keycode_map = {
 		"name": "Media Stop",
 		"description": "Media Stop",
 		"keycode": "0xAF",
-		"label": [ "stop" ],
+		"label": [ "stop", "\<i class\=\'fa fa-stop\'\>\<\/i\>" ],
 		"label_priority": [ "stop" ],
 		"short_name": "KC_MSTP"
 	},
@@ -1161,7 +1161,7 @@ var keycode_map = {
 		"name": "Media Play/Pause",
 		"description": "Media Play/Pause",
 		"keycode": "0xB0",
-		"label": [ "play", "apple play" ],
+		"label": [ "play", "\<i class\=\'fa fa-play\'\>\<\/i\>", "apple play" ],
 		"short_name": "KC_MPLY"
 	},
 	"KC_MEDIA_SELECT": {
@@ -1190,7 +1190,7 @@ var keycode_map = {
 		"name": "Calculator",
 		"description": "Calculator",
 		"keycode": "0xB4",
-		"label": [ "calc", "cal" ],
+		"label": [ "calc", "\<i class\=\'fa fa-calculator\'\>\<\/i\>", "cal" ],
 		"short_name": "KC_CALC"
 	},
 	"KC_MY_COMPUTER": {
@@ -1260,14 +1260,14 @@ var keycode_map = {
 		"name": "Screen Brightness Increment",
 		"description": "BRIGHTNESS UP",
 		"keycode": "0xBD",
-		"label": [ "sbup", "brightness up" ],
+		"label": [ "sbup", "brightness up", "\<i class\=\'kb kb-unicode-screen-bright\'\>\<\/i\>" ],
 		"short_name": "KC_SBUP"
 	},
 	"KC_BRIGHTNESS_DOWN": {
 		"name": "Screen Brightness Decrement",
 		"description": "Screen Brightness Decrement",
 		"keycode": "0xBE",
-		"label": [ "sbdn", "brightness down" ],
+		"label": [ "sbdn", "brightness down", "\<i class\=\'kb kb-unicode-screen-dim\'\>\<\/i\>" ],
 		"short_name": "KC_SBDN"
 	},
 	"KC_BOOTLOADER": {
@@ -1499,7 +1499,7 @@ var keycode_map = {
 		"name": "Left GUI",
 		"description": "Left GUI (Windows/Apple/Meta key)",
 		"keycode": "0xE3",
-		"label": [ "gui", "win", "command", "comm", "meta", "lgui", "lwin", "lcommand", "lcomm", "lmeta" ],
+		"label": [ "gui", "win", "\<i class\=\'fa fa-windows\'\>\<\/i\>", "command", "comm", "meta", "lgui", "lwin", "lcommand", "lcomm", "lmeta" ],
 		"label_priority": [ "gui", "win", "command", "comm", "meta" ]
 	},
 	"KC_RCTRL": {
@@ -1526,7 +1526,7 @@ var keycode_map = {
 		"name": "Right GUI",
 		"description": "Right GUI (Windows/Apple/Meta key)",
 		"keycode": "0xE7",
-		"label": [ "gui", "win", "command", "comm", "meta", "rgui", "rwin", "rcommand", "rcomm", "rmeta" ]
+		"label": [ "gui", "win", "command", "comm", "meta", "rgui", "rwin", "rcommand", "rcomm", "rmeta", "\<i class\=\'kb kb-logo-windows-8\'\>\<\/i\>" ]
 	},
 	/* Mousekey */
 	"KC_MS_UP": {
