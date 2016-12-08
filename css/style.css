@@ -10,6 +10,82 @@ body {
 	border: none;
 	outline: none;
 }
+.navbar-default {
+  background-color: #0288d1;
+  border-color: #0277bd;
+}
+.navbar-default .navbar-brand {
+  color: #f7f7f7;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #fffeff;
+}
+.navbar-default .navbar-text {
+  color: #f7f7f7;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #f7f7f7;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #fffeff;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #fffeff;
+  background-color: #0277bd;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #fffeff;
+  background-color: #0277bd;
+}
+.navbar-default .navbar-toggle {
+  border-color: #0277bd;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #0277bd;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #f7f7f7;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #f7f7f7;
+}
+.navbar-default .navbar-link {
+  color: #f7f7f7;
+}
+.navbar-default .navbar-link:hover {
+  color: #fffeff;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #f7f7f7;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #fffeff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #fffeff;
+    background-color: #0277bd;
+  }
+}
+
+.btn-primary.active{
+    background-color: #0277bd;
+}
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand{
+	margin-left: 0px; 
+}
 /*
 .nav .dropdown-menu>li>a:hover,
 .nav .dropdown-menu>li>a:focus {

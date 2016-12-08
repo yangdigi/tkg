@@ -515,13 +515,13 @@ function initForm(layer_mode) {
 }
 
 function appendNotification() {
-	$('.navbar-fixed-top').prepend('<div id="notification"><div id="notification-inner" lang="en">This website is under construction, any feature will be removed or be modified at any time without advance notice.</div></div>');
+	//$('.navbar-fixed-top').prepend('<div id="notification"><div id="notification-inner" lang="en">This website is under construction, any feature will be removed or be modified at any time without advance notice.</div></div>');
 }
 
 function showNotification() {
 	appendNotification();
-	$('.navbar-fixed-top').css('top', '29px');
-	$('body').css('padding-top', '79px');
+	$('.navbar-fixed-top').css('top', '0px');  //29px
+	$('body').css('padding-top', '59px');  //79px
 }
 
 function onLangChange(lang) {
