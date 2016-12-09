@@ -3,6 +3,7 @@ html, body {
 }
 body {
 	padding-top: 50px;
+    overflow-y: scroll;
 }
 #home,
 #help,
@@ -10,6 +11,22 @@ body {
 	border: none;
 	outline: none;
 }
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0, 0.6);
+    border-radius: 1px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0,0,0, 0.7);
+}
+
 .navbar-default {
   background-color: #0288d1;
   border-color: #0277bd;
