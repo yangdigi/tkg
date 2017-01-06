@@ -9,14 +9,16 @@ function appendLeds() {
 	if (leds.length) {
 		for (var index in leds) {
 			var led = leds[index];
-			$('#led-wrapper').append(
-				$('<div>').attr({ "class": "form-group"  }).append(
-					$('<label>').attr({ "for": "led" + index + '-binding', "class": "col-md-2 control-label" })
-					.text(_keyboard["led_map"][index]["name"])
-				).append(
-					$('<div>').attr({ "id": "led" + index, "class": "led-row col-md-10" })
-				)
-			);
+			if(!(_keyboard["led_map"][index]["name"].match("-hide"))){
+				$('#led-wrapper').append(
+					$('<div>').attr({ "class": "form-group"  }).append(
+						$('<label>').attr({ "for": "led" + index + '-binding', "class": "col-md-2 control-label" })
+						.text(_keyboard["led_map"][index]["name"])
+						).append(
+						$('<div>').attr({ "id": "led" + index, "class": "led-row col-md-10" })
+						)
+						);
+			}
 		}
 		$('#led-wrapper .led-row').led();
 		$('#led-field').parent().show();

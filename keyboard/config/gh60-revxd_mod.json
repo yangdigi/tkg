@@ -34,7 +34,7 @@
 			"backlight": 1
 		}
 	},{
-		"name": "WASD",
+		"name": "WASD-hide",
 		"description": "",
 		"default": {
 			"binding": "LEDMAP_LAYER",
@@ -42,7 +42,7 @@
 			"backlight": 1
 		}
 	},{
-		"name": "Right Shift/Alt/Ctrl",
+		"name": "Right Shift/Alt/Ctrl-hide",
 		"description": "",
 		"default": {
 			"binding": "LEDMAP_LAYER",
@@ -50,11 +50,10 @@
 			"backlight": 1
 		}
 	},{
-		"name": "Fn",
+		"name": "Backlight",
 		"description": "",
 		"default": {
-			"binding": "LEDMAP_LAYER",
-			"args": [ 1 ],
+			"binding": "LEDMAP_NO",
 			"backlight": 1
 		}
 	}],
