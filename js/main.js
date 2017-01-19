@@ -243,10 +243,29 @@ $(function() {
 		var $this = $(this);
 		if (isKLEUrl($this.val())) {
 			$this.attr('disabled', 'disabled');
-			getKLERawData($this.val(), function(data) {
+			getKLERawData($this.val(), function(data, notes) {
 				$this.val(data);
 				$this.removeAttr('disabled');
 				$this.trigger('blur_custom', [ $this ]);
+				if (notes) {
+					console.log(notes);
+					var result = tkg.importFns(notes);
+					if (!result) {
+						notes = notes.replace(/\r\n/, "\n");
+						notes = notes.split("\n\n");
+						for (var i = 0; i < notes.length; i++) {
+							if (notes[i].toLowerCase().startsWith("fn:\n")) {
+								var fn = notes[i].substring(notes[i].indexOf("\n") + 1)
+								fn = fn.replace(/```/g, "");
+								result = tkg.importFns(fn);
+							}
+						}
+					}
+					if (result) {
+						appendFns();
+					}
+
+				}
 			}, function() {
 				$(this).removeAttr('disabled');
 				$(this).trigger('blur_custom', [ $this ]);
@@ -309,6 +328,12 @@ function download(id) {
 		fn_actions = tkg.getFnActionsSymbol();
 		leds = tkg.getLedsSymbol();
 	}
+	else if (id == 'dl_hex') {
+		return downloadHEX();
+	}
+	else {
+		return;
+	}
 
 	if ($('#dl_form').length > 0) {
 		$('#dl_form').remove();
@@ -350,6 +375,21 @@ function download(id) {
 	$('#dl_form').submit();
 }
 
+function downloadHEX() {
+	var result = parseKeyboardName(_keyboardName);
+
+	if ($('#dl_form').length > 0) {
+		$('#dl_form').remove();
+	}
+	var $form = $("<form>").attr({ "id": "dl_form", "action": "download.php?file=hex", "method": "POST" }).append(
+			$("<input>").attr({ "type": "hidden", "name": "name_main", "value": result["main"] }),
+			$("<input>").attr({ "type": "hidden", "name": "name_variant", "value": result["variant"] || "" })
+		);
+
+	$("body").append($form);
+	$('#dl_form').submit();
+}
+
 function switchPage(id) {
 	if (id == '') {
 		id = 'home';
@@ -377,7 +417,28 @@ function switchPage(id) {
 
 function updateKeyboardSelect() {
 	$('#keyboard-sel').multiselect({
-		buttonContainer: '<div class="btn-group" />'
+		buttonContainer: '<div class="btn-group" />',
+		buttonText: function(options, select) {
+			if (options.length) {
+				var $selected = $(options[0]);
+				if ("preset" in _keyboard_config) {
+					var preset = _keyboard_config["preset"];
+					if (preset >= 0) {
+						var name = _keyboard_config["presets"][preset]["name"];
+					}
+					else {
+						var name = "Custom";
+					}
+					return $selected.text() + ' - <span lang="en">' + name + '</span> <b class="caret"></b>';
+				}
+				else {
+					return $selected.text() + ' <b class="caret"></b>';
+				}
+			}
+			else {
+				return 'Loading...';
+			}
+		}
 	});
 	$.ajaxSetup({ async: false, cache: false });
 	$.getJSON("keyboard/list.json", function(list) {
@@ -427,6 +488,7 @@ function initialize(keyboard_name, layer_mode) {
 	var keyboard = loadKeyboard(keyboard_name);
 	_keyboardName = keyboard_name;
 	_keyboard = keyboard;
+	loadFirmwareInfo();
 	initKeyboardConfig(keyboard_name);
 	initKeyboardInfo(keyboard);
 	initForm(layer_mode);
@@ -484,6 +546,48 @@ function loadKeyboard(keyboard_name) {
 	return keyboard;
 }
 
+function loadFirmwareInfo() {
+	var list = [{'name': ''}];
+	if (_keyboard['firmware']) {
+		for (var i = 0; i < _keyboard['firmware'].length; i++) {
+			list.push({'name': _keyboard['firmware'][i]['name']});
+		}
+	}
+
+	var result = parseKeyboardName(_keyboardName);
+	var main = result['main'];
+	var variant = result['variant'];
+	var filename = main;
+	if (variant) {
+		filename += '-' + variant;
+	}
+	for (var i = 0; i < list.length; i++) {
+		if (list[i]['name']) {
+			list[i]['filename'] = filename + "-" + normalizeString(list[i]['name']) + '.hex';
+		}
+		else {
+			list[i]['filename'] = filename + '.hex';
+			list[i]['name'] = 'Default';
+		}
+	}
+	_keyboard['firmware_info'] = list;
+	for (var i = 0; i < _keyboard['firmware_info'].length; i++) {
+		(function(i) {
+			$.getJSON("//api.github.com/repos/kairyu/tkg-firmware/commits?path=" + _keyboard['firmware_info'][i]['filename'], function(response) {
+				if (response[0] && response[0].commit && response[0].commit.committer) {
+					var iso_date = response[0].commit.committer.date;
+					if (iso_date) {
+						var date = new Date(iso_date);
+						_keyboard['firmware_info'][i]['date'] = date.toLocaleString();
+						$('#kbd-info').data('bs.popover').options.content = getKeyboardInfoContent(_keyboard);
+					}
+				}
+			}).fail(function(jqXHR, textStatus, errorThrown) {
+			});
+		})(i);
+	}
+}
+
 function initKeyboardInfo(keyboard) {
 	// remove old
 	$('#kbd-info').popover('destroy');
@@ -494,12 +598,25 @@ function initKeyboardInfo(keyboard) {
 		html: true,
 		trigger: 'hover',
 		container: '#kbd-info-container',
-		content:
-			'<strong><span lang="en">Name</span>: </strong>' + keyboard['name'] + '<br/>' +
-			'<strong><span lang="en">Description</span>: </strong><span lang="en">' + keyboard['description'] + '</span><br/>' +
-			'<strong><span lang="en">Max Layers</span>: </strong>' + keyboard['max_layers'] + '<br/>' +
-			'<strong><span lang="en">Max Fns</span>: </strong>' + keyboard['max_fns']
+		content: getKeyboardInfoContent(keyboard)
 	});
+}
+
+function getKeyboardInfoContent(keyboard) {
+	var content =
+		'<strong><span lang="en">Name</span>: </strong>' + keyboard['name'] + '<br/>' +
+		'<strong><span lang="en">Description</span>: </strong><span lang="en">' + keyboard['description'] + '</span><br/>' +
+		'<strong><span lang="en">Max Layers</span>: </strong>' + keyboard['max_layers'] + '<br/>' +
+		'<strong><span lang="en">Max Fns</span>: </strong>' + keyboard['max_fns'] + '<br/>' +
+		'<strong><span lang="en">Firmware</span>: </strong><br/>';
+	for (var i = 0; i < keyboard['firmware_info'].length; i++) {
+		var info = keyboard['firmware_info'][i];
+		content += '&nbsp;&nbsp;<strong><span lang="en">' + info['name'] + '</span>: </strong>' + (info['date'] || 'Loading...');
+		if (i < keyboard['firmware_info'].length - 1) {
+			content += '<br/>';
+		}
+	}
+	return content;
 }
 
 function initForm(layer_mode) {
@@ -617,8 +734,7 @@ function updateBurnButtonState() {
 
 function updateDownloadBinButtonState() {
 	if (_advanced_mode) {
-        //$('#dl_bin').show();   //NO_BIN
-        $('#dl_bin').hide();
+		$('#dl_bin').show();
 	}
 	else {
 		$('#dl_bin').hide();
@@ -826,7 +942,7 @@ function getKLERawData(url, success, fail) {
 		var type = match[1];
 		var hash = match[2];
 		if (type == "layouts") {
-			$.get("http://www.keyboard-layout-editor.com.s3.amazonaws.com/layouts/" + hash,  function(data) {
+			$.get("agent.php?layouts=" + hash,  function(data) {
 				if (data.substr(0, 1) == '[' && data.substr(-1, 1) == ']') {
 					success.call(this, data.slice(1, -1));
 				}
@@ -838,14 +954,18 @@ function getKLERawData(url, success, fail) {
 			});
 		}
 		else if (type == "gists") {
-			$.getJSON("http://api.github.com/gists/" + hash,  function(data) {
-					var content = "";
-					for (var name in data["files"]) {
-						content = data["files"][name]["content"]
-						break;
+			$.getJSON("//api.github.com/gists/" + hash,  function(data) {
+				var kbd = "";
+				var notes = "";
+				for (var name in data["files"]) {
+					if (name.endsWith(".kbd.json")) {
+						kbd = data["files"][name]["content"]
 					}
-					console.log(content);
-					success.call(this, content.slice(1, -1));
+					else if (name.endsWith(".notes.md")) {
+						notes = data["files"][name]["content"]
+					}
+				}
+				success.call(this, kbd.slice(1, -1), notes);
 			}).fail(function() {
 				fail.call(this);
 			});
@@ -895,23 +1015,45 @@ versionCompare = function(left, right) {
 	return 0;
 }
 
+function changeDownloadButtonHEX() {
+	$dl_btn = $('#dl_eep');
+	if ($dl_btn.length) {
+		$dl_btn.html($dl_btn.html().replace('.eep', '.hex'));
+		$dl_btn.attr('id', 'dl_hex').removeClass('dl-btn-restrict disabled');
+		updateDownloadButtonState();
+	}
+}
+
+function changeDownloadButtonEEP() {
+	$dl_btn = $('#dl_hex');
+	if ($dl_btn.length) {
+		$dl_btn.html($dl_btn.html().replace('.hex', '.eep'));
+		$dl_btn.attr('id', 'dl_eep').addClass('dl-btn-restrict');
+		updateDownloadButtonState();
+	}
+}
+
 $(window).keydown(function(e) {
 	if (e.keyCode == 16) {
+		changeDownloadButtonHEX();
 		changeBurnButtonHEX();
 	}
 });
 
 $(window).keyup(function(e) {
 	if (e.keyCode == 16) {
+		changeDownloadButtonEEP();
 		changeBurnButtonEEP();
 	}
 });
 
 $(window).mousemove(function(e) {
 	if (!e.shiftKey) {
+		changeDownloadButtonEEP();
 		changeBurnButtonEEP();
 	}
 	if (e.shiftKey) {
+		changeDownloadButtonHEX();
 		changeBurnButtonHEX();
 	}
 });
