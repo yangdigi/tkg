@@ -166,5 +166,11 @@
 		"size": 4,
 		"type": "word",
 		"data": []
-	}]
+	}],
+    "bootloader": [{
+        "name": "RawHID",
+        "mcu": "atmega32u4",
+        "vid": 65261,
+        "pid": 24672
+    }]
 }
