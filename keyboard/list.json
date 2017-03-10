@@ -55,6 +55,10 @@
 	"size": 149,
 	"group": "third-party"
 },{
+	"name": "EK2000",
+	"size": 144,
+	"group": "third-party"
+},{
 	"name": "YD40w_v2 (+YDPADw)",
 	"size": 40,
 	"group": "YDKBs"
