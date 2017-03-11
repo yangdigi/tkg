@@ -4,7 +4,7 @@
 	"max_layers": 6,
 	"max_fns": 32,
 	"eep_size": 1024,
-	"eep_start": 17,
+	"eep_start": 32,
 	"matrix_rows": 19,
 	"matrix_cols": 8,
 	"physical_rows": 8,
@@ -251,7 +251,7 @@
 	"led_additional_index": 0,
 	"additional": [{
 		"start": 7,
-		"size": 4,
+		"size": 24,
 		"type": "word",
 		"data": []
 	}],
