@@ -1,6 +1,6 @@
 {
 	"name": "USB2USB",
-	"description": "USB2USB Converter (With RawHID)",
+	"description": "USB2USB Converter (With RawHID and bluetooth support)",
 	"max_layers": 3,
 	"max_fns": 32,
 	"eep_size": 1024,
@@ -8,7 +8,7 @@
 	"matrix_rows": 16,
 	"matrix_cols": 16,
 	"matrix_map": {},
-	"led_count": 3,
+	"led_count": 4,
 	"led_map": [{
 		"name": "Num Lock",
 		"description": "",
@@ -30,11 +30,23 @@
 			"binding": "LEDMAP_SCROLL_LOCK",
 			"backlight": 0
 		}
+	},{
+		"name": "USB2USB LED",
+		"description": "",
+		"default": {
+			"binding": "LEDMAP_CAPS_LOCK",
+			"backlight": 0
+		}
 	}],
 	"led_additional_index": 0,
+	"action_functions": [{
+		"name": "蓝牙/USB 切换",
+		"description": "连接模式切换!",
+		"opt": []
+	}],
 	"additional": [{
 		"start": 8,
-		"size": 6,
+		"size": 8,
 		"type": "word",
 		"data": []
 	}],
