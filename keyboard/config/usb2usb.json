@@ -1,11 +1,11 @@
 {
 	"name": "USB2USB",
 	"description": "USB2USB Converter (With RawHID and bluetooth support)",
-	"max_layers": 3,
+	"max_layers": 7,
 	"max_fns": 32,
 	"eep_size": 1024,
 	"eep_start": 16,
-	"matrix_rows": 16,
+	"matrix_rows": 8,
 	"matrix_cols": 16,
 	"matrix_map": {},
 	"led_count": 4,

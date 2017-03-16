@@ -620,6 +620,11 @@ function usb2usbParseMatrixMapping(variant) {
 			true,
 			function(key) {
 				var keycode = parseInt(key.keycode, 16);
+				//for 7 layers support
+				if ((keycode > 0xDF)&(keycode < 0xE8)) keycode -= 0x70;
+				if ((keycode > 0xF3)&(keycode < 0xFB)) keycode -= 0x8A;
+				if (keycode > 0x7F) keycode = 0;
+				//for 7 layers end
 				if (key.keycode) {
 					return {
 						"row": (keycode & 0xF0) >> 4,
