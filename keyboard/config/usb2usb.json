@@ -1,6 +1,6 @@
 {
 	"name": "USB2USB",
-	"description": "USB2USB Converter (With RawHID and bluetooth support)",
+	"description": "USB2USB Converter (With RawHID and bluetooth support)<br><a href=\"https://item.taobao.com/item.htm?id=534632668627\" target=\"_blank\">介绍及使用教程</a>",
 	"max_layers": 7,
 	"max_fns": 32,
 	"eep_size": 1024,
