@@ -7,36 +7,8 @@
 	"size": 60,
 	"group": "second-party"
 },{
-	"name": "RedScarfII",
-	"size": 77,
-	"group": "second-party"
-},{
-	"name": "RedScarfII+",
-	"size": 87,
-	"group": "second-party"
-},{
-	"name": "RedScarfIII",
-	"size": 96,
-	"group": "second-party"
-},{
-	"name": "AKB96",
-	"size": 96,
-	"group": "second-party"
-},{
 	"name": "Kimera",
 	"size": 0,
-	"group": "first-party"
-},{
-	"name": "Kimera (Two-Headed)",
-	"size": 0,
-	"group": "first-party"
-},{
-	"name": "Staryu",
-	"size": 5,
-	"group": "first-party"
-},{
-	"name": "Staryu (Lite)",
-	"size": 5,
 	"group": "first-party"
 },{
 	"name": "Alan60",
@@ -49,15 +21,15 @@
 },{
 	"name": "FF42",
 	"size": 42,
-	"group": "third-party"
+	"group": "second-party"
 },{
 	"name": "G80_9009HAU",
 	"size": 149,
-	"group": "third-party"
+	"group": "second-party"
 },{
 	"name": "EK2000",
 	"size": 144,
-	"group": "third-party"
+	"group": "second-party"
 },{
 	"name": "YD40w_v2 (+YDPADw)",
 	"size": 40,
