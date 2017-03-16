@@ -600,22 +600,26 @@ function initKeyboardInfo(keyboard) {
 		container: '#kbd-info-container',
 		content: getKeyboardInfoContent(keyboard)
 	});
+	
+	// show description on page
+	_keyboard_description = keyboard['description'];
+	$('#kbd-description').html(_keyboard_description);
 }
 
 function getKeyboardInfoContent(keyboard) {
 	var content =
 		'<strong><span lang="en">Name</span>: </strong>' + keyboard['name'] + '<br/>' +
-		'<strong><span lang="en">Description</span>: </strong><span lang="en">' + keyboard['description'] + '</span><br/>' +
+		//'<strong><span lang="en">Description</span>: </strong><span lang="en">' + keyboard['description'] + '</span><br/>' +
 		'<strong><span lang="en">Max Layers</span>: </strong>' + keyboard['max_layers'] + '<br/>' +
 		'<strong><span lang="en">Max Fns</span>: </strong>' + keyboard['max_fns'] + '<br/>' +
 		'<strong><span lang="en">Firmware</span>: </strong><br/>';
-	for (var i = 0; i < keyboard['firmware_info'].length; i++) {
+	/*for (var i = 0; i < keyboard['firmware_info'].length; i++) {
 		var info = keyboard['firmware_info'][i];
 		content += '&nbsp;&nbsp;<strong><span lang="en">' + info['name'] + '</span>: </strong>' + (info['date'] || 'Loading...');
 		if (i < keyboard['firmware_info'].length - 1) {
 			content += '<br/>';
 		}
-	}
+	}*/
 	return content;
 }
 
