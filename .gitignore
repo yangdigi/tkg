@@ -6,3 +6,4 @@ cache/c/*
 cache/eep/*
 dev/
 !.gitkeep
+*.lnk
