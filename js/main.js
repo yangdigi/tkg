@@ -302,6 +302,12 @@ $(function() {
 	$('#dl_eep, #dl_c, #dl_bin').click(function() {
 		download($(this).attr('id'));
 	});
+
+	$('#force-close-progress-dialog').click(function(){
+		closeProgress();
+		changeBurnButtonReady();
+		updateBurnButton();
+	});
 });
 
 function download(id) {

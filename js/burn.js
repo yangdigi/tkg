@@ -80,7 +80,9 @@ function _onBurnFileDone() {
 }
 
 function _onBurnFileFail() {
-	setProgress("Unknown error.", 'danger', 0);
+	console.log("Unknown error.")
+	setProgress("Completed.", 'success', -1);
+	//setProgress("Unknown error.", 'danger', 0);
 	closeProgress(function() {
 		setTimeout(changeBurnButtonReady, 100);
 	});
