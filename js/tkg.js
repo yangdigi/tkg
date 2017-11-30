@@ -351,7 +351,7 @@ function TKG() {
 		for (var symbol in keycode_map) {
 			var key = keycode_map[symbol];
 			var code = parseInt(key["keycode"], 16);
-			if (code == 0 || (code >= parseInt("0x04", 16) && code <= parseInt("0x65", 16))) {
+			if (code == 0 || (code >= parseInt("0x04", 16) && code <= parseInt("0xbf", 16))) {
 				key_options.push({
 					"value": symbol,
 					"text": key["name"],
