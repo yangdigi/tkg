@@ -1,6 +1,6 @@
 {
 	"name": "Kimera",
-	"description": "Kimera board",
+	"description": "Kimera board with YDKB's UART2BT module support.<br> Kimera core --> UART2BT <br> VCC --> V | GND --> G | SCK --> R | MOSI --> S | MISO -->C",
 	"max_layers": 3,
 	"max_fns": 32,
 	"eep_size": 1024,
@@ -70,6 +70,14 @@
 	},{
 		"name": "RGB明度减",
 		"description": "RGB明度减",
+		"opt": []
+	},{
+		"name": "BT/USB切换",
+		"description": "BT/USB 切换",
+		"opt": []
+	},{
+		"name": "节能开/关",
+		"description": "使用或禁用蓝牙模式下的节能",
 		"opt": []
 	}],
 	"bootloader": [{
