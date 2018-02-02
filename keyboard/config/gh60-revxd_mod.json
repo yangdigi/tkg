@@ -1,6 +1,6 @@
 {
 	"name": "GH60 (RevXD RGB Under Glow Mod)",
-	"description": "GH60 XD的一个改版固件，增加灯带控制及其他一些按键功能。默认固件是支持xd60 v2.0自带6底灯PCB。",
+	"description": "GH60 XD的一个改版固件，增加灯带控制及其他一些按键功能。默认固件是支持xd60 v2.0自带6底灯PCB 以及蓝牙模块。<br> 蓝牙模块UART2BT接法(也可见<a href=\"https://item.taobao.com/item.htm?id=564151691969\" target=\"_blank\">淘宝介绍</a>示意图): <br>XD60 --> UART2BT <br> VCC --> V | GND --> G | GPIO0 --> C | GPIO3 --> R",
 	"eep_start": 50,
 	"led_count": 7,
 	"led_map": [{
@@ -102,10 +102,18 @@
 		"description": "按一下，启用或禁用锁WIN键功能，游戏防误按有用!",
 		"opt": []
 	},{
-		"name": "坑人模式 启用/禁用",
-		"description": "启用后，按键时有20%的几率按键会无效，防止他人玩键盘有用!",
-		"opt": []
-	}],
+        "name": "坑人模式 启用/禁用",
+        "description": "启用后，按键时有20%的几率按键会无效，防止他人玩键盘有用!",
+        "opt": []
+    },{
+        "name": "蓝牙/USB 切换",
+        "description": "Switch between bluetooth and USB",
+        "opt": []
+    },{
+        "name": "Sleep On/Off",
+        "description": "Sleep Mode for bluetooth on or off.",
+        "opt": []
+    }],
 	"led_additional_index": 0,
 	"additional": [{
 		"start": 30,
